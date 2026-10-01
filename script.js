@@ -13,14 +13,16 @@ function calculaIva(importe) { // Se le pasa por parámetro el importeDescontado
 // 11. Una vez hayamos terminado y salido, debe mostrar un último mensaje por consola indicando el número de operaciones realizadas,
 // el gasto total realizado, el gasto medio, el mayor y el menor.
 function operaciones() {
-    let confirmacion = window.confirm("¿Quiere realizar una/otra operación?");
     let contadorOperaciones = 0;
     let gastoTotal = 0;
     let gastoMedio = 0;
     let gastoMayor = 0;
     let gastoMenor = 0;
+    let confirmacion = false;
 
     do {
+        confirmacion = window.confirm("¿Quiere realizar una/otra operación?");
+
         // 1. Pedir al usuario el precio del producto
         const precioProducto = parseFloat(window.prompt("Introduzca el precio del producto: "));
 
