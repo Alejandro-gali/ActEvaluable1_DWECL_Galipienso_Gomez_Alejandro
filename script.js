@@ -15,7 +15,7 @@ function calculaIva(importe) { // Se le pasa por parámetro el importeDescontado
 function operaciones() {
     let confirmacion = window.confirm("¿Quiere realizar una/otra operación?");
     let contadorOperaciones = 0;
-    let gastoTotal += acumulaGastos;
+    let gastoTotal = 0;
     let gastoMedio = 0;
     let gastoMayor = 0;
     let gastoMenor = 0;
@@ -61,11 +61,15 @@ function operaciones() {
 
 
         contadorOperaciones++;
-        let acumulaGastos = calculaIva(importeDescontado);
 
     } while (confirmacion == true);
 
-    console.log("El número de operaciones realizadas ha sido: " + contadorOperaciones  + ".\n");
+    console.log("El número de operaciones realizadas ha sido: " + contadorOperaciones + ".\n",
+        "El total de gastos ha sido: " + gastoTotal + ".\n",
+        "El medio de gastos ha sido: " + gastoMedio + ".\n",
+        "El mayor de gastos ha sido: " + gastoMayor + ".\n",
+        "El menos de los gastos ha sido: " + gastoMenor + "."
+    );
 }
 
 operaciones();
